@@ -1,0 +1,416 @@
+/* Full width hero banner */
+/* Combined .full-banner and .casual-hero */
+.full-banner {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); /* For full-width effect */
+  background: linear-gradient(to right, #0f0f0f, #2b2b2b); /* New gradient */
+  padding: 5rem 2rem; /* New padding */
+  text-align: center;
+  color: white;
+  border-radius: 0; /* New border-radius */
+}
+
+/* Old .casual-hero properties not covered by .full-banner */
+.casual-hero {
+  /* Some properties overridden by .full-banner, keeping unique ones */
+  border-radius: 0 0 18px 18px; /* If you want this specific rounded bottom */
+}
+
+
+/* Buttons (General, non-AI) */
+/* Combined .casual-btn and .casual-btn-outline from both previous versions */
+.casual-btn, .casual-btn-outline {
+  padding: 12px 26px; /* Retained from previous new padding */
+  border-radius: 8px; /* Retained from previous new border-radius */
+  font-weight: 500; /* Retained from previous new font-weight */
+  font-size: 16px; /* Retained from previous new font-size */
+  cursor: pointer; /* From old casual-btn */
+  border: none; /* From old casual-btn */
+  transition: .22s; /* From old casual-btn */
+}
+
+.casual-btn {
+  background: #fff; /* Retained from previous new background */
+  color: #000; /* Retained from previous new color */
+}
+
+.casual-btn:hover {
+  background: #e35f34; /* Retained from old casual-btn hover */
+  /* Consider adding a new hover for the new casual-btn if desired, e.g., background: #eee; */
+}
+
+.casual-btn-outline {
+  border: 2px solid white; /* Retained from previous new border */
+  color: white; /* Retained from previous new color */
+  background: transparent; /* From old casual-btn-outline */
+}
+
+.casual-btn-outline:hover {
+  background: white; /* From old casual-btn-outline */
+  color: #111; /* From old casual-btn-outline */
+}
+
+/* AI Box Wrapper */
+/* This is primarily from the latest new CSS, as it's a complete redesign */
+.ai-box {
+  width: 100%;
+  max-width: 650px; /* From new CSS */
+  margin: 60px auto; /* From new CSS */
+  padding: 30px; /* From new CSS */
+  border-radius: 14px; /* From new CSS */
+  background: rgba(255, 255, 255, 0.12); /* From new CSS */
+  backdrop-filter: blur(15px); /* From new CSS */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* From new CSS */
+  animation: fadeIn 0.7s ease-in-out; /* From new CSS */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15); /* From new CSS */
+}
+
+/* AI Section (from previous combined, kept if needed for a different context) */
+/* If .ai-box is the primary AI container, this might be redundant or for a different section */
+.ai-section {
+  background: #fafafa; /* From previous combined */
+  padding: 40px 20px; /* From previous combined */
+  max-width: 750px; /* From previous combined */
+  /* margin and border-radius/box-shadow are overridden by .ai-box if applied to the same element */
+}
+
+
+/* AI Title */
+/* Primarily from the latest new CSS */
+.ai-title {
+  font-size: 26px; /* From new CSS */
+  font-weight: 700; /* From new CSS */
+  text-align: center;
+  color: #000; /* From new CSS */
+  margin-bottom: 15px; /* From new CSS */
+}
+
+/* AI Form Styling */
+/* Primarily from the latest new CSS */
+.ai-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* From new CSS */
+  /* max-width and margin: 0 auto from previous combined are removed here, assuming .ai-box handles overall width */
+}
+
+/* AI Form Inputs & Selects */
+/* Primarily from the latest new CSS */
+.ai-form input,
+.ai-form select {
+  padding: 12px 16px; /* From new CSS */
+  border-radius: 10px; /* From new CSS */
+  border: 1px solid #ddd; /* From new CSS */
+  font-size: 16px; /* From new CSS */
+  background: #fff; /* From new CSS */
+  outline: none; /* From new CSS */
+  transition: 0.25s; /* From new CSS */
+  width: 100%; /* Implicitly needed or from previous combined */
+  -webkit-appearance: none; /* From previous combined */
+  -moz-appearance: none; /* From previous combined */
+  appearance: none; /* From previous combined */
+}
+
+.ai-form input:focus,
+.ai-form select:focus {
+  border-color: #6c63ff; /* From new CSS */
+  box-shadow: 0 0 10px rgba(108,99,255,0.4); /* From new CSS */
+}
+
+.ai-form input::placeholder {
+  color: #999; /* From previous combined */
+}
+
+.ai-form select {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* From previous combined */
+  background-repeat: no-repeat; /* From previous combined */
+  background-position: right 15px center; /* From previous combined */
+  background-size: 20px; /* From previous combined */
+  cursor: pointer; /* From previous combined */
+}
+
+
+/* AI Button */
+/* Primarily from the latest new CSS */
+.ai-btn {
+  padding: 12px; /* From new CSS */
+  background: #6c63ff; /* From new CSS */
+  color: #fff; /* From new CSS */
+  border: none;
+  border-radius: 10px; /* From new CSS */
+  font-size: 17px; /* From new CSS */
+  cursor: pointer;
+  transition: 0.25s; /* From new CSS */
+  /* old box-shadow removed as new CSS doesn't specify it, using its transition */
+}
+.ai-btn:hover {
+  background: #584df0; /* From new CSS */
+  transform: translateY(-2px);
+}
+
+.ai-btn:disabled {
+  background: #aaa; /* From new CSS */
+  cursor: not-allowed;
+  /* old box-shadow and transform: none removed as new CSS is simpler */
+}
+
+
+/* Chat bubble / AI Reply (from previous combined, kept if needed separately from result box) */
+.ai-chat {
+  margin-top: 15px; /* From previous combined */
+  padding: 15px; /* From previous combined */
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.5; /* From previous combined */
+  white-space: pre-wrap; /* From previous combined */
+}
+
+.ai-reply {
+  background: #e8fce8; /* From previous combined */
+  border-left: 4px solid #41af41; /* From previous combined */
+}
+
+.ai-chat.reply {
+  /* Redundant if .ai-reply is used, but kept for direct class usage if needed */
+  background: #e9ffe6; /* From old reply background */
+  border-left: 4px solid #47b36f; /* From old reply border */
+}
+
+/* AI Error Styling */
+/* Primarily from the latest new CSS */
+.ai-error {
+  color: #d60000; /* From new CSS */
+  background: rgba(255, 0, 0, 0.1); /* From new CSS */
+  padding: 10px; /* From new CSS */
+  border-left: 4px solid red; /* From new CSS */
+  border-radius: 6px; /* From new CSS */
+  /* Previous combined text-align, margin-top, font-size, font-weight removed to prioritize new design */
+}
+
+.ai-chat.error {
+  /* Redundant if .ai-error is used, but kept for direct class usage if needed */
+  background: #ffe8e8; /* From old error background */
+  border-left: 4px solid #e25555; /* From old error border */
+}
+
+/* AI Result Box */
+/* Primarily from the latest new CSS */
+.ai-result-box {
+  margin-top: 20px; /* From new CSS */
+  padding: 20px; /* From new CSS */
+  background: #f7f6ff; /* From new CSS */
+  border-radius: 12px; /* From new CSS */
+  border: 1px solid rgba(108,99,255,0.3); /* From new CSS */
+  animation: fadeIn 0.4s ease-in; /* From new CSS */
+  /* Previous combined box-shadow removed to prioritize new design */
+}
+
+.ai-result-title {
+  font-size: 20px; /* From new CSS */
+  font-weight: 600; /* From new CSS */
+  margin-bottom: 8px; /* From new CSS */
+  color: #6c63ff; /* From new CSS */
+  /* Previous combined text-align removed */
+}
+
+.ai-result {
+  font-size: 16px; /* From new CSS */
+  line-height: 1.5;
+  color: #444; /* From new CSS */
+  /* Previous combined text-align removed */
+}
+
+
+/* Loading Animation Dots */
+/* Primarily from the latest new CSS */
+.ai-loading {
+  text-align: center; /* From new CSS */
+  margin-top: 15px; /* From new CSS */
+  display: block; /* Override previous flex, or remove previous ai-loading if this is the only one */
+}
+
+.ai-loading span {
+  height: 10px; /* From new CSS */
+  width: 10px; /* From new CSS */
+  background: #6c63ff; /* From new CSS */
+  display: inline-block; /* From new CSS */
+  border-radius: 50%;
+  animation: bounce 1.1s infinite alternate; /* From new CSS */
+  margin: 0 3px; /* From new CSS */
+}
+
+/* Previous .dot styles are now replaced by .ai-loading span */
+/* Previous .ai-chat.loading is also replaced in functionality by .ai-loading */
+
+@keyframes bounce {
+  to {
+    opacity: .3; /* From new CSS */
+    transform: translateY(-8px); /* From new CSS */
+  }
+}
+
+/* Fade Animation (Re-defined to latest new CSS) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Casual Badge */
+.casual-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: .85rem;
+}
+
+/* Casual Title */
+.casual-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+/* Casual Subtitle */
+.casual-subtitle {
+  max-width: 750px;
+  margin: 15px auto;
+  opacity: 0.9;
+  line-height: 1.6;
+  font-size: 1.08rem;
+}
+
+/* Casual Button Group */
+.casual-btn-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+/* Casual Page Wrapper */
+.casual-container {
+  padding: 40px 7%;
+  background: #fafafa;
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 35px 0 18px;
+  color: #222;
+  text-transform: capitalize;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Card Styling */
+.grid-item {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  transition: 0.25s ease;
+  padding-bottom: 14px;
+}
+
+.grid-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.12);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.grid-item h3 {
+  margin: 10px 14px 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Tags */
+.tag {
+  margin: 0 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ff7043;
+  text-transform: uppercase;
+}
+
+/* Card Text */
+.grid-item p {
+  margin: 6px 14px 0;
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Color AI Suggestion Box */
+.color-box {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  padding: 25px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.color-box h2 {
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.color-box input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.color-box button {
+  background: #ff7043;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.color-box button:hover {
+  background: #e3592f;
+}
+
+.result {
+  margin-top: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .grid-item img {
+    height: 200px;
+  }
+}

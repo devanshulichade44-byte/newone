@@ -1,0 +1,455 @@
+/*
+  Styleglanz Aesthetic: Dark Blue-Grey, Serif Fonts, Editorial Layout.
+*/
+
+:root {
+  --primary-color: #3f606e; /* Muted blue-grey for banners/accents */
+  --dark-bg: #293844; /* THE OLD DARK BG COLOR FOR SECTIONS */
+  --dark-hero-bg: #3f606e; 
+  --dark-hero-text: #bdbdbd; 
+  --dark-hero-title: #ffffff; 
+  --text-dark: #333;
+  --text-light: #fff;
+  --bg-light: #f9f9f9;
+  --bg-white: #fff;
+  --link-color: #55a0f0; 
+  --border-color: #eee;
+  --accent-color: #7b94a2; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--bg-white);
+}
+
+/* --- Hero Section --- */
+.skincare-hero-container {
+  width: 100%;
+  height: 90vh; 
+  background-color: var(--dark-hero-bg);
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center 20%;
+}
+
+.skincare-hero-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.skincare-page-nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5vw; 
+    z-index: 20;
+}
+
+.skincare-logo-left {
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--dark-hero-text);
+}
+
+.skincare-nav-links-right a {
+    text-decoration: none;
+    color: var(--link-color); 
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+
+.skincare-nav-icons-right {
+    font-size: 1.1em;
+    cursor: pointer;
+    color: var(--dark-hero-text);
+}
+
+.skincare-hero-text {
+  position: absolute;
+  top: 30%;
+  left: 5vw;
+  color: var(--dark-hero-text); 
+  max-width: 600px;
+  z-index: 10;
+}
+
+.skincare-hero-title {
+  font-family: 'Playfair Display', serif; 
+  font-size: 3.5em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: var(--dark-hero-title); 
+}
+
+.skincare-explore-button {
+  background: none;
+  color: var(--dark-hero-text);
+  border: 1px solid var(--dark-hero-text);
+  padding: 10px 25px;
+  font-size: 0.9em;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.skincare-gift-set-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 5vw; 
+    background-color: var(--primary-color);
+    color: var(--dark-hero-text);
+    font-weight: bold;
+    z-index: 25; 
+}
+
+
+/* --- Skin Type Selector Section --- */
+.skincare-type-selector-container {
+    padding: 80px 5vw 40px 5vw;
+    text-align: center;
+    background-color: var(--bg-white);
+}
+
+.skincare-type-selector-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.skincare-type-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skincare-type-box {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.skincare-type-box:hover {
+    background-color: var(--bg-light);
+    transform: translateY(-5px);
+}
+
+.skincare-type-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* --- Mini Banner --- */
+.mini-banner-wrapper {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: var(--bg-white); 
+}
+.mini-banner {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--primary-color); 
+    color: var(--text-light);
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.mini-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+.mini-banner p {
+    font-size: 0.9em;
+    margin: 5px 0 0 0;
+    opacity: 0.8;
+}
+
+/* --- Balanced Editorial Layout (FIXES implemented) --- */
+.balanced-skin-section {
+  display: grid;
+  /* Reduced info column width slightly to give image more dominance */
+  grid-template-columns: minmax(300px, 0.8fr) minmax(300px, 1.5fr);
+  gap: 60px;
+  align-items: center; 
+  padding: 100px 8%; 
+  margin: 80px 0;
+  border-radius: 0; 
+  
+  /* FIX 1: Set solid dark background color */
+  background-color: var(--dark-bg);
+  /* FIX 2: Remove parallax setup for image background */
+  background-attachment: scroll; 
+  
+  /* Animation Initial State */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Animation Visibility Class */
+.balanced-skin-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Alternating Image Position */
+.balanced-skin-section.reverse {
+  grid-template-columns: minmax(300px, 1.5fr) minmax(300px, 0.8fr);
+}
+.balanced-skin-section.reverse .balanced-info-panel {
+  order: 2; 
+}
+.balanced-skin-section.reverse .balanced-image-panel {
+  order: 1; 
+}
+
+/* Info Panel and Soft Beige Gradient */
+.balanced-info-panel {
+  /* Soft beige gradient overlay */
+  background: linear-gradient(to top right, #fffefb, #fcf9f7); 
+  border-radius: 18px;
+  padding: 50px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+  z-index: 5; 
+  min-height: 400px;
+}
+
+/* FIX 3: Image Positioning - ensures image is visually in front/dominant */
+.balanced-image-panel {
+    z-index: 10; /* Higher z-index to be visually "in front" */
+    position: relative;
+    /* Optional: Add slight overlap with info panel for layering effect */
+    /* margin-left: -50px; */ 
+}
+
+.balanced-skin-image {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    display: block; 
+}
+
+/* Content Styling */
+.balanced-skin-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem; 
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #2f4954;
+  margin-bottom: 20px;
+}
+.balanced-skin-info h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #444;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.balanced-skin-info ul, .balanced-skin-info ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+.balanced-skin-info li {
+    margin-bottom: 8px;
+}
+
+/* Recommended Products Placeholder Styling */
+.recommended-products-list {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+.recommended-products-list h4 {
+    font-size: 1.1em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.product-card-placeholder {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+
+/* --- Universal Skincare Rules Section --- */
+.skincare-rules-section {
+    padding: 100px 10%;
+    text-align: center;
+    background-color: #fcf9f7; 
+    margin: 80px 0 0 0;
+    border-top: 1px solid #eee;
+}
+.skincare-rules-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.skincare-rules-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2f4954;
+    font-weight: 500;
+}
+.skincare-rules-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.skincare-rules-list li {
+    font-size: 1.1em;
+    padding: 15px 0;
+    border-bottom: 1px dashed #e5e5e5;
+    color: #444;
+}
+.skincare-rules-list li span {
+    font-weight: 600;
+    color: #2f4954;
+}
+.skincare-rules-button {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 900px) {
+    /* Mobile Layout Fixes */
+    .balanced-skin-section {
+      grid-template-columns: 1fr;
+      padding: 60px 6%;
+      background-attachment: scroll; 
+      margin: 40px 0; 
+    }
+    .balanced-skin-section.reverse {
+        grid-template-columns: 1fr;
+    }
+    .balanced-image-panel {
+      order: -1; /* Image always on top of info panel on mobile */
+    }
+    .balanced-info-panel {
+      min-height: unset; 
+    }
+    .balanced-skin-image {
+        width: 100%; 
+    }
+}
+
+/* ... (rest of media queries remain) ... */
+@media (max-width: 768px) {
+    /* ... (nav and hero fixes) ... */
+  .skincare-hero-title {
+    font-size: 2.5em;
+  }
+  .skincare-type-grid {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .skincare-type-box {
+    width: 45%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .skincare-type-box {
+    width: 90%; 
+  }
+}
+/* --- Recommended Product Section --- */
+.balanced-image-panel {
+  background: #faf7f3;
+  border-left: 3px solid #e3d7c1;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.balanced-image-panel h4 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #2c2c2c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.product-card h5 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-weight: 600;
+  color: #b49164;
+}

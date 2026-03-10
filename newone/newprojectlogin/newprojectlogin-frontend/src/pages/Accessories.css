@@ -1,0 +1,156 @@
+/* Apply to body for full page background */
+body {
+  margin: 0; /* Important to remove default browser margin */
+  background-color: #fff; /* This makes the entire viewport white */
+}
+
+/* ✅ Container - Adjusted background for consistency with formal.css principles */
+.mensaccessories-container {
+  font-family: 'Poppins', sans-serif; /* Changed to Poppins for consistency */
+  
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #faf8f3; /* Matching formal.css general background */
+  color: #111; /* Matching formal.css default text color */
+}
+
+/* ✅ Hero Section - Adjusted for consistency with formal.css principles */
+.mensaccessories-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 120px 7%; /* Matching formal.css hero padding */
+  background: linear-gradient(120deg, #171717, #4a3b2f); /* Matching formal.css hero gradient */
+  color: #fff; /* Matching formal.css hero text color */
+  border-radius: 8px; /* Kept the border-radius from your original Accessories.css */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Kept the box-shadow */
+}
+
+.mensaccessories-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.12); /* Matching formal.css badge background */
+  color: #fff; /* Matching formal.css badge color */
+  padding: 6px 14px; /* Matching formal.css badge padding */
+  border-radius: 30px; /* Matching formal.css badge border-radius */
+  font-size: 0.9em; /* Adjusted slightly */
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.mensaccessories-title {
+  font-size: 3.2em; /* Matching formal.css title font-size */
+  color: #fff; /* Ensuring title is white for the dark hero background */
+  font-weight: 700;
+  margin-top: 18px; /* Matching formal.css title margin */
+  margin-bottom: 10px;
+}
+
+.mensaccessories-subtitle {
+  font-size: 1.2em;
+  color: rgba(255,255,255,0.92); /* Matching formal.css subtitle color */
+  line-height: 1.6;
+  max-width: 760px; /* Matching formal.css subtitle max-width */
+  margin: 12px auto 25px; /* Matching formal.css subtitle margin */
+  opacity: .95; /* Matching formal.css subtitle opacity */
+}
+
+/* ✅ Section */
+.mensaccessories-section {
+  margin-bottom: 50px;
+  padding: 10px 0;
+  background: transparent;
+}
+
+/* ✅ Section Title - Adjusted for consistency with formal.css principles */
+.mensaccessories-section-title {
+  font-size: 1.8rem; /* Matching formal.css grid-heading font-size */
+  font-weight: 700;
+  text-align: center;
+  color: #111; /* Matching formal.css grid-heading color */
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.mensaccessories-section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #007bff; /* Kept your original blue color for the underline */
+  border-radius: 2px;
+}
+
+/* ✅ Grid - Adjusted for consistency with formal.css principles (minmax(300px, 1fr) for larger cards) */
+.mensaccessories-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increased minmax for larger cards */
+  gap: 22px; /* Matching formal.css gap */
+}
+
+/* ✅ Grid Card - Adjusted for consistency with formal.css principles */
+.mensaccessories-grid-item {
+  border-radius: 12px; /* Matching formal.css formal-card border-radius */
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.88)); /* Matching formal.css card background */
+  box-shadow: 0 8px 24px rgba(15,15,15,0.06); /* Matching formal.css card box-shadow */
+  transition: transform .24s ease, box-shadow .24s ease; /* Matching formal.css card transition */
+  display: flex;
+  flex-direction: column;
+}
+
+.mensaccessories-grid-item:hover {
+  transform: translateY(-6px); /* Matching formal.css card hover transform */
+  box-shadow: 0 18px 40px rgba(10,10,10,0.12); /* Matching formal.css card hover box-shadow */
+}
+
+.mensaccessories-grid-item img {
+  width: 100%;
+  height: 350px; /* Matching formal.css formal-img height */
+  object-fit: cover;
+  border-bottom: 1px solid #eee; /* Kept existing border-bottom */
+  transition: transform .28s ease, filter .28s ease; /* Matching formal.css image transition */
+}
+
+.mensaccessories-grid-item:hover img { /* Added hover effect for image matching formal.css */
+  transform: scale(1.03);
+  filter: brightness(.9);
+}
+
+.mensaccessories-grid-item h3 {
+  font-size: 1.05rem; /* Matching formal.css h3 font-size */
+  margin: 8px 16px 6px; /* Adjusted margins for consistency with formal.css formal-info h3 */
+  font-weight: 600;
+  color: #111; /* Matching formal.css h3 color */
+}
+
+/* ✅ Tag - Adjusted for consistency with formal.css principles */
+.mensaccessories-tag {
+  display: inline-block;
+  background: #007bff; /* Changed to a solid blue from your previous tag bg */
+  color: #fff; /* Ensuring text is white on the blue tag */
+  padding: 6px 10px; /* Matching formal.css tag padding */
+  border-radius: 8px; /* Matching formal.css tag border-radius */
+  font-size: 0.78rem; /* Matching formal.css tag font-size */
+  margin: 0 16px 10px; /* Adjusted margins */
+  font-weight: 600;
+}
+
+
+/* ✅ Description - Adjusted for consistency with formal.css principles */
+.mensaccessories-grid-item p {
+  font-size: 0.93rem; /* Matching formal.css p font-size */
+  color: #333; /* Matching formal.css p color */
+  padding: 0 16px 14px; /* Adjusted padding */
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* ✅ Responsive - Adjusted for consistency with formal.css principles */
+@media (max-width: 600px) { /* Changed from 768px to 600px to match formal.css */
+  .mensaccessories-hero { padding: 60px 18px; } /* Matching formal.css hero padding */
+  .mensaccessories-title { font-size: 2rem; } /* Matching formal.css title font-size */
+  .mensaccessories-grid-item img { height: 220px; } /* Matching formal.css formal-img height */
+}

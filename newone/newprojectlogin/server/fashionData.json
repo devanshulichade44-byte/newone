@@ -1,0 +1,578 @@
+{
+    "meta": {
+        "project": "StyleGlanz - Formal Fashion Catalog",
+        "version": "1.0",
+        "generatedBy": "ChatGPT",
+        "date": "2025-10-30"
+    },
+    "master_colors": {
+        "blazers_coats_suits": [
+            "Black",
+            "Jet Black",
+            "Navy Blue",
+            "Midnight Blue",
+            "Charcoal Grey",
+            "Steel Grey",
+            "Ash Grey",
+            "Oxford Grey",
+            "Deep Bottle Green",
+            "Dark Olive",
+            "Burgundy",
+            "Maroon",
+            "Chocolate Brown",
+            "Espresso Brown",
+            "Taupe",
+            "Camel Brown",
+            "Sand Beige",
+            "Cream",
+            "Ivory",
+            "Off-White",
+            "Stone",
+            "Light Grey",
+            "Pearl Grey",
+            "Powder Blue",
+            "Slate Blue",
+            "Indigo"
+        ],
+        "shirts": [
+            "Pure White",
+            "Ivory White",
+            "Light Grey",
+            "Charcoal Black",
+            "Sky Blue",
+            "Powder Blue",
+            "Steel Blue",
+            "Airforce Blue",
+            "Lavender",
+            "Lilac",
+            "Baby Pink",
+            "Beige",
+            "Cream",
+            "Mint Green",
+            "White Pinstripe",
+            "Blue Pinstripe",
+            "Micro-Checks White-Blue",
+            "White Oxford",
+            "Herringbone White",
+            "Poplin White",
+            "Twill Blue"
+        ],
+        "trousers_pants": [
+            "Black",
+            "Navy",
+            "Charcoal Grey",
+            "Medium Grey",
+            "Light Grey",
+            "Khaki",
+            "Beige",
+            "Stone",
+            "Taupe",
+            "Olive",
+            "Brown",
+            "Dark Brown",
+            "Midnight Blue",
+            "Cream"
+        ],
+        "formal_denim": [
+            "Dark Navy Denim",
+            "Jet Black Denim",
+            "Charcoal Denim",
+            "Deep Indigo",
+            "Dark Grey",
+            "Rinse-wash Blue",
+            "Ice Blue",
+            "Faded Black Denim"
+        ],
+        "waistcoats": [
+            "Black",
+            "Navy",
+            "Charcoal",
+            "Light Grey",
+            "Burgundy",
+            "Deep Green",
+            "Brown",
+            "Chocolate",
+            "Cream",
+            "Ivory"
+        ],
+        "ties_pockets": [
+            "Black",
+            "Navy",
+            "Charcoal",
+            "Ash Grey",
+            "Silver",
+            "White (pocket square)",
+            "Burgundy",
+            "Maroon",
+            "Deep Green",
+            "Royal Blue",
+            "Midnight Blue",
+            "Baby Pink",
+            "Lilac",
+            "Powder Blue",
+            "Champagne Gold",
+            "Ivory"
+        ],
+        "shoes_belts": [
+            "Pure Black",
+            "Espresso Brown",
+            "Dark Chocolate Brown",
+            "Oxblood",
+            "Burgundy",
+            "Tan"
+        ],
+        "accessories": [
+            "Silver",
+            "Gold",
+            "Gunmetal",
+            "Black metal accents"
+        ]
+    },
+    "categories": {
+        "classic_formal": [
+            "Black",
+            "Navy",
+            "Charcoal Grey",
+            "White"
+        ],
+        "luxury_formal": [
+            "Midnight Blue",
+            "Burgundy",
+            "Deep Bottle Green",
+            "Oxblood"
+        ],
+        "soft_premium": [
+            "Cream",
+            "Beige",
+            "Taupe",
+            "Dove Grey",
+            "Powder Blue"
+        ],
+        "earth_business": [
+            "Brown",
+            "Tan",
+            "Olive",
+            "Camel Brown"
+        ],
+        "modern_blue_range": [
+            "Navy Blue",
+            "Airforce Blue",
+            "Indigo",
+            "Slate Blue"
+        ],
+        "premium_whites": [
+            "Pure White",
+            "Off-White",
+            "Ivory"
+        ]
+    },
+    "outfit_combinations": {
+        "suits_top_tier": [
+            {
+                "id": "suit-001",
+                "suit": "Charcoal Grey",
+                "shirt": "Pure White",
+                "pants": "Charcoal Grey",
+                "tie": "Black",
+                "shoes": "Pure Black",
+                "belt": "Black",
+                "tags": [
+                    "classic_formal",
+                    "boardroom",
+                    "interview"
+                ]
+            },
+            {
+                "id": "suit-002",
+                "suit": "Navy Blue",
+                "shirt": "Pure White",
+                "pants": "Navy Blue",
+                "tie": "Burgundy",
+                "shoes": "Pure Black",
+                "belt": "Black",
+                "tags": [
+                    "classic_formal",
+                    "client_meet",
+                    "versatile"
+                ]
+            },
+            {
+                "id": "suit-003",
+                "suit": "Black",
+                "shirt": "Pure White",
+                "pants": "Black",
+                "tie": "Black Silk",
+                "shoes": "Pure Black (patent optional)",
+                "belt": "Black",
+                "tags": [
+                    "formal_night",
+                    "ceremony",
+                    "classic_formal"
+                ]
+            },
+            {
+                "id": "suit-004",
+                "suit": "Midnight Blue",
+                "shirt": "Pure White",
+                "pants": "Midnight Blue",
+                "tie": "Black Bow (for tux) / Deep Navy",
+                "shoes": "Pure Black Patent",
+                "belt": "Black",
+                "tags": [
+                    "wedding",
+                    "gala",
+                    "luxury_formal"
+                ]
+            },
+            {
+                "id": "suit-005",
+                "suit": "Deep Bottle Green",
+                "shirt": "Pure White",
+                "pants": "Deep Bottle Green",
+                "tie": "Silver / White Pocket Square",
+                "shoes": "Espresso Brown",
+                "belt": "Dark Brown",
+                "tags": [
+                    "luxury_formal",
+                    "unique",
+                    "evening"
+                ]
+            },
+            {
+                "id": "suit-006",
+                "suit": "Taupe",
+                "shirt": "Ivory White",
+                "pants": "Taupe",
+                "tie": "Dark Brown Knit",
+                "shoes": "Dark Chocolate Brown",
+                "belt": "Dark Brown",
+                "tags": [
+                    "summer_wedding",
+                    "soft_premium"
+                ]
+            },
+            {
+                "id": "suit-007",
+                "suit": "Burgundy",
+                "shirt": "Ivory White",
+                "pants": "Burgundy",
+                "tie": "Black / Grey (textured)",
+                "shoes": "Pure Black",
+                "belt": "Black",
+                "tags": [
+                    "party",
+                    "luxury_formal"
+                ]
+            },
+            {
+                "id": "suit-008",
+                "suit": "Camel Brown",
+                "shirt": "Ivory White",
+                "pants": "Camel Brown",
+                "tie": "Maroon Knit",
+                "shoes": "Brown / Tan",
+                "belt": "Brown",
+                "tags": [
+                    "day_event",
+                    "earth_business",
+                    "summer"
+                ]
+            }
+        ],
+        "corporate_office_sets": [
+            {
+                "id": "office-001",
+                "blazer": "Navy Blue",
+                "shirt": "Sky Blue",
+                "trouser": "Charcoal Grey",
+                "shoes": "Pure Black",
+                "belt": "Black",
+                "notes": "Most professional, high-trust"
+            },
+            {
+                "id": "office-002",
+                "blazer": "Charcoal Grey",
+                "shirt": "Pure White",
+                "trouser": "Navy Blue",
+                "shoes": "Pure Black",
+                "belt": "Black",
+                "notes": "High contrast, classic"
+            },
+            {
+                "id": "office-003",
+                "blazer": "Olive",
+                "shirt": "Pure White",
+                "trouser": "Beige",
+                "shoes": "Dark Chocolate Brown",
+                "belt": "Dark Brown",
+                "notes": "Modern, creative-corporate"
+            },
+            {
+                "id": "office-004",
+                "blazer": "Steel Blue",
+                "shirt": "Pure White",
+                "trouser": "Navy Blue",
+                "shoes": "Pure Black",
+                "belt": "Black",
+                "notes": "Subtle luxe"
+            },
+            {
+                "id": "office-005",
+                "blazer": "Navy Blue",
+                "shirt": "Baby Pink",
+                "trouser": "Navy Blue",
+                "shoes": "Dark Chocolate Brown",
+                "belt": "Dark Brown",
+                "notes": "European modern, confident"
+            }
+        ],
+        "shirts_and_trousers": [
+            {
+                "id": "shirt-001",
+                "shirt": "Pure White",
+                "trouser": "Navy",
+                "shoes": "Pure Black",
+                "notes": "Universal corporate"
+            },
+            {
+                "id": "shirt-002",
+                "shirt": "Sky Blue",
+                "trouser": "Charcoal Grey",
+                "shoes": "Pure Black",
+                "notes": "Interview-friendly"
+            },
+            {
+                "id": "shirt-003",
+                "shirt": "Lavender",
+                "trouser": "Navy",
+                "shoes": "Pure Black",
+                "notes": "Stylish office"
+            },
+            {
+                "id": "shirt-004",
+                "shirt": "Baby Pink",
+                "trouser": "Grey",
+                "shoes": "Dark Chocolate Brown",
+                "notes": "Modern and warm"
+            },
+            {
+                "id": "shirt-005",
+                "shirt": "White Pinstripe",
+                "trouser": "Navy",
+                "shoes": "Pure Black",
+                "notes": "Classic pattern"
+            },
+            {
+                "id": "shirt-006",
+                "shirt": "White Oxford",
+                "trouser": "Olive",
+                "shoes": "Dark Brown",
+                "notes": "Smart-casual formal"
+            }
+        ],
+        "smart_formal_jeans_chinos": [
+            {
+                "id": "jeans-001",
+                "shirt": "Pure White",
+                "jeans_chino": "Dark Navy Denim",
+                "blazer_optional": "Navy Blue",
+                "shoes": "Brown Loafers",
+                "notes": "Smart-casual, client-light meetings"
+            },
+            {
+                "id": "jeans-002",
+                "shirt": "Sky Blue",
+                "jeans_chino": "Charcoal Denim",
+                "blazer_optional": "Grey",
+                "shoes": "Pure Black",
+                "notes": "After-hours formal"
+            },
+            {
+                "id": "jeans-003",
+                "shirt": "White Oxford",
+                "jeans_chino": "Dark Indigo",
+                "blazer_optional": null,
+                "shoes": "White Minimal Sneakers / Brown Loafers",
+                "notes": "Business-casual Fridays (neat sneakers allowed)"
+            },
+            {
+                "id": "jeans-004",
+                "shirt": "Black",
+                "jeans_chino": "Jet Black Denim",
+                "blazer_optional": "Charcoal",
+                "shoes": "Pure Black",
+                "notes": "Evening business casual"
+            }
+        ],
+        "wedding_premium": [
+            {
+                "id": "wedding-001",
+                "suit": "Ivory",
+                "shirt": "Pure White",
+                "tie": "Champagne Gold",
+                "pocket_square": "Ivory",
+                "shoes": "Tan",
+                "notes": "Groom / day wedding"
+            },
+            {
+                "id": "wedding-002",
+                "suit": "Cream",
+                "shirt": "Pure White",
+                "tie": "Rose Gold",
+                "shoes": "Brown",
+                "notes": "Summer ceremony"
+            },
+            {
+                "id": "wedding-003",
+                "suit": "Midnight Blue",
+                "shirt": "Pure White",
+                "tie": "Black Bow",
+                "shoes": "Pure Black Patent",
+                "notes": "Evening luxury wedding"
+            },
+            {
+                "id": "wedding-004",
+                "suit": "Burgundy",
+                "shirt": "Ivory White",
+                "tie": "Gold / Maroon Pocket Square",
+                "shoes": "Pure Black",
+                "notes": "Statement groom or guest"
+            }
+        ]
+    },
+    "styling_rules": {
+        "shoe_to_outfit": [
+            {
+                "outfit_tone": "Black / Navy / Grey",
+                "recommended_shoe": "Pure Black"
+            },
+            {
+                "outfit_tone": "Brown / Beige / Camel / Taupe",
+                "recommended_shoe": "Brown (Espresso / Dark Chocolate)"
+            },
+            {
+                "outfit_tone": "Burgundy / Deep Green",
+                "recommended_shoe": "Oxblood / Brown"
+            }
+        ],
+        "belt_match": "Belt color should match shoes (leather finish similar)",
+        "sock_rule": "Match socks to trousers (not shoes). Prefer subtle patterns only.",
+        "tie_rule": "When wearing patterned tie, keep shirt solid; with patterned shirt choose solid tie."
+    },
+    "useful_endpoints_example": {
+        "GET_colors": "/api/colors (returns master_colors)",
+        "GET_combos": "/api/combinations  (returns outfit_combinations)",
+        "GET_by_tag": "/api/combinations?tag=luxury_formal",
+        "POST_recommend": "/api/recommend  (body: { occasion, preferred_colors, avoid_colors, garment_type, style, formality, limit })"
+    },
+    "formal": [
+        {
+            "suggestion": "Charcoal Grey suit with a pure white shirt, black tie and polished black Oxfords — ideal for boardrooms and interviews.",
+            "occasion": "boardroom / interview"
+        },
+        {
+            "suggestion": "Navy Blue suit with a pure white shirt, burgundy tie and black leather shoes — versatile for client meetings and formal office wear.",
+            "occasion": "client_meet / formal"
+        },
+        {
+            "suggestion": "Black suit with a pure white shirt and black silk tie, paired with patent black shoes — classic evening formal or ceremony attire.",
+            "occasion": "formal_night / ceremony"
+        },
+        {
+            "suggestion": "Midnight Blue tux with a pure white shirt and black bow tie, polished patent shoes — premium choice for weddings and galas.",
+            "occasion": "wedding / gala"
+        },
+        {
+            "suggestion": "Deep Bottle Green suit with white shirt, silver pocket square and espresso brown shoes — refined evening luxury look.",
+            "occasion": "luxury_formal / evening"
+        },
+        {
+            "suggestion": "Taupe suit with ivory shirt and dark brown knit tie plus dark chocolate shoes — excellent for summer weddings and soft-premium events.",
+            "occasion": "summer_wedding / soft_premium"
+        },
+        {
+            "suggestion": "Burgundy suit with ivory shirt and textured black/grey tie, finished with black shoes — statement party or evening wear.",
+            "occasion": "party / luxury_formal"
+        },
+        {
+            "suggestion": "Camel Brown suit with ivory shirt and maroon knit tie, brown shoes — daylight events and earth-business casual formals.",
+            "occasion": "day_event / earth_business"
+        },
+        {
+            "suggestion": "Navy Blue blazer with sky blue shirt and charcoal trousers, black shoes — the most professional, high-trust corporate set.",
+            "occasion": "corporate / office"
+        },
+        {
+            "suggestion": "Charcoal Grey blazer with pure white shirt and navy trousers, black shoes — high-contrast classic look for office presentations.",
+            "occasion": "corporate / presentation"
+        },
+        {
+            "suggestion": "Olive blazer with pure white shirt and beige trousers, dark chocolate brown shoes — modern, creative corporate outfit.",
+            "occasion": "creative_corporate / office"
+        },
+        {
+            "suggestion": "Steel Blue blazer with pure white shirt and navy trousers, black shoes — subtle luxe corporate attire.",
+            "occasion": "subtle_luxe / office"
+        },
+        {
+            "suggestion": "Navy Blue outfit with baby pink shirt and navy trousers, dark chocolate shoes — European-modern corporate style.",
+            "occasion": "modern_office / confident"
+        },
+        {
+            "suggestion": "Pure white shirt with navy trousers and black shoes — a universal, interview-friendly corporate combination.",
+            "occasion": "interview / universal"
+        },
+        {
+            "suggestion": "Sky blue shirt with charcoal trousers and black shoes — classic interview-ready option.",
+            "occasion": "interview"
+        },
+        {
+            "suggestion": "Lavender shirt with navy trousers and black shoes — stylish office choice that remains formal.",
+            "occasion": "stylish_office"
+        },
+        {
+            "suggestion": "Baby pink shirt with grey trousers and dark chocolate brown shoes — modern, warm office look.",
+            "occasion": "modern_office"
+        },
+        {
+            "suggestion": "White pinstripe shirt with navy trousers and black shoes — classic patterned formal that stays professional.",
+            "occasion": "classic_pattern / office"
+        },
+        {
+            "suggestion": "White Oxford shirt with olive trousers and dark brown shoes — smart-casual formal with a tailored edge.",
+            "occasion": "smart_casual_formal"
+        },
+        {
+            "suggestion": "Pure white shirt with dark navy denim and optional navy blazer, brown loafers — smart-casual for client-light meetings.",
+            "occasion": "smart_casual / client_light"
+        },
+        {
+            "suggestion": "Sky blue shirt with charcoal denim and blazer, black shoes — evening formal that blends relaxed with professional.",
+            "occasion": "after_hours_formal"
+        },
+        {
+            "suggestion": "White Oxford with dark indigo jeans, minimal sneakers or brown loafers — business-casual Friday but kept neat.",
+            "occasion": "business_casual_friday"
+        },
+        {
+            "suggestion": "Black shirt with jet black denim and charcoal blazer, black shoes — evening business casual with a sharp edge.",
+            "occasion": "evening_business_casual"
+        },
+        {
+            "suggestion": "Ivory suit with pure white shirt and champagne gold tie, tan shoes — premium groom or day-wedding look.",
+            "occasion": "wedding / groom"
+        },
+        {
+            "suggestion": "Cream suit with pure white shirt and rose-gold tie, brown shoes — breathable summer ceremony attire.",
+            "occasion": "wedding / summer"
+        },
+        {
+            "suggestion": "Midnight Blue suit with pure white shirt and black bow tie, patent black shoes — evening luxury wedding ensemble.",
+            "occasion": "wedding / luxury_evening"
+        },
+        {
+            "suggestion": "Burgundy suit with ivory shirt and gold/maroon pocket square, black shoes — statement outfit for groom or guest.",
+            "occasion": "wedding / statement"
+        }
+    ]
+}

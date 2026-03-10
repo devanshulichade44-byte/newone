@@ -1,0 +1,108 @@
+/* Luxury Aesthetic Color Grid */
+
+.lux-wrapper {
+  padding: 40px 20px;
+  background: #f8f4ef;
+  font-family: "Poppins", sans-serif;
+  color: #2e2e2e;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.lux-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #4b3a2f;
+}
+
+.lux-sub {
+  font-size: 15px;
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+/* ✅ Centered grid + bigger cards */
+.lux-big-grid {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(120px, 1fr)); /* bigger cards */
+  gap: 10px;
+  justify-content: center;
+  max-width: 1650px;
+  margin: auto;
+}
+
+/* Each Cell */
+.lux-cell {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #e5ded3;
+  transition: transform .2s ease, box-shadow .2s ease;
+  text-align: center;
+  min-height: 120px; /* bigger height */
+}
+
+.lux-cell:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.lux-cell-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #7a5e40;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lux-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lux-list li {
+  font-size: 12px;
+  color: #3e3e3e;
+  padding: 2px 0;
+  border-bottom: 1px solid #eee7dd;
+}
+
+.lux-list li:last-child {
+  border-bottom: none;
+}
+
+/* ✅ Responsive improvements */
+@media (max-width: 1600px) {
+  .lux-big-grid {
+    grid-template-columns: repeat(14, minmax(120px, 1fr));
+  }
+}
+@media (max-width: 1300px) {
+  .lux-big-grid {
+    grid-template-columns: repeat(12, minmax(120px, 1fr));
+  }
+}
+@media (max-width: 1100px) {
+  .lux-big-grid {
+    grid-template-columns: repeat(10, minmax(120px, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .lux-big-grid {
+    grid-template-columns: repeat(6, minmax(120px, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .lux-big-grid {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .lux-big-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}

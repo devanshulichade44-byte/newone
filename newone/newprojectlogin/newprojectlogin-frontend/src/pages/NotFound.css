@@ -1,0 +1,49 @@
+.gl-404-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #fff; /* Amazon has plain white background */
+  font-family: "Amazon Ember", Arial, sans-serif;
+  color: #111;
+  text-align: center;
+}
+
+/* Box style */
+.glass-box {
+  max-width: 450px;
+  padding: 40px 30px;
+}
+
+/* Page title like Amazon */
+.glass-box h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Message like Amazon */
+.glass-box p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.gl-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff9900; /* Amazon yellow-orange */
+  color: #111;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid #e68a00;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Button hover */
+.gl-btn:hover {
+  background: #e68a00;
+}

@@ -1,0 +1,302 @@
+.formal-container {
+  background: #faf8f3;
+  font-family: 'Poppins', sans-serif;
+  color: #111; /* default text color for page (cards use dark text too) */
+}
+
+/* HERO */
+.formal-hero {
+  background: linear-gradient(120deg, #171717, #4a3b2f);
+  color: #fff;
+  padding: 10px 7% 170px; /* reduced top padding from 90px → 70px */
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formal-badge {
+  font-size: .9rem;
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 30px;
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+}
+
+.formal-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+.formal-subtitle {
+  max-width: 760px;
+  margin: 12px auto 25px;
+  opacity: .95;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.92);
+}
+
+/* Buttons in hero */
+.formal-btn-group { display: flex; gap: 15px; justify-content: center; margin-top: 18px; }
+
+.formal-btn,
+.formal-btn-outline {
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .25s;
+  font-size: .95rem;
+  border: none;
+}
+
+.formal-btn {
+  background: #ff6a4a;
+  color: white;
+}
+.formal-btn-outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.12);
+  color: white;
+}
+.formal-btn:hover { background: #e6593a; }
+.formal-btn-outline:hover { background: rgba(255,255,255,0.95); color: #111; }
+
+/* Color Input Area */
+.color-box-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  margin-top: -245px;
+}
+
+.color-form {
+  background: rgba(255,255,255,0.92);
+  padding: 22px;
+  width: 420px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+}
+
+.color-form h2 { margin-bottom: 6px; font-size: 1.1rem; }
+.color-form p { margin-bottom: 10px; color: #444; font-size: .95rem; }
+
+.color-form input,
+.color-form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  color: #111;
+}
+
+.color-form button {
+  margin-top: 10px;
+  padding: 12px;
+  width: 100%;
+  background: #111;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .18s;
+  font-weight: 700;
+}
+.color-form button:hover { background: #000; }
+
+/* Result box */
+.result-box {
+  margin-top: 14px;
+  padding: 14px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  color: #111;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* Grid Section */
+.formal-grid-section {
+  padding: 36px 6%;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.grid-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #111; /* dark heading color */
+}
+
+/* responsive grid */
+.formal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+/* Card */
+.formal-card {
+  border-radius: 12px;
+  color: #111;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.88));
+  box-shadow: 0 8px 24px rgba(15,15,15,0.06);
+  transition: transform .24s ease, box-shadow .24s ease;
+}
+.formal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(10,10,10,0.12);
+}
+
+.formal-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform .28s ease, filter .28s ease;
+}
+.formal-card:hover .formal-img {
+  transform: scale(1.03);
+  filter: brightness(.9);
+}
+
+/* Card text (dark so it's readable on light bg) */
+.formal-info {
+  padding: 14px 16px;
+  color: #111; /* dark text color */
+}
+.tag {
+  display: inline-block;
+  color: #e6593a;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: .78rem;
+  font-weight: 600;
+}
+.formal-info h3 {
+  margin: 8px 0 6px;
+  font-size: 1.05rem;
+  color: #111;
+}
+.formal-info p {
+  margin: 0;
+  font-size: .93rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* small screens tweaks */
+@media (max-width: 600px) {
+  .formal-hero { padding: 60px 18px; }
+  .formal-title { font-size: 2rem; }
+  .color-form { width: 92%; }
+  .formal-img { height: 220px; }
+}
+/* ---------- AI SUGGESTION BOX ---------- */
+.ai-style-box {
+  background: #f6f1eb; /* soft beige tone */
+  border: 1.5px solid #d6c4b8;
+  border-radius: 20px;
+  padding: 30px 40px;
+  margin-top: 50px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.ai-style-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.ai-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  color: #2b2b2b;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.ai-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.ai-input,
+.ai-select {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #cbb6a6;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background: #fff;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.ai-input:focus,
+.ai-select:focus {
+  border-color: #b79b86;
+  box-shadow: 0 0 0 3px rgba(183, 155, 134, 0.2);
+}
+
+.ai-btn {
+  background: linear-gradient(135deg, #b79b86, #a3846a);
+  color: #fff;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.ai-btn:hover {
+  background: linear-gradient(135deg, #c4a892, #a27c61);
+  transform: scale(1.03);
+}
+
+.ai-error {
+  color: #b30000;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.ai-result-box {
+  background: #fff;
+  border: 1px solid #e2d4c8;
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.ai-result-title {
+  font-weight: 600;
+  color: #4a3d35;
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.ai-result {
+  color: #222;
+  line-height: 1.6;
+  font-size: 15px;
+}

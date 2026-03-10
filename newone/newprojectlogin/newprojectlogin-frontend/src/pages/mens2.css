@@ -1,0 +1,541 @@
+/* General Reset and Font */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: "Jura", sans-serif; /* Keep your chosen font */
+  scroll-behavior: smooth;
+  /* Crucial: Ensure the entire body has a base white background */
+  background-color: #ffffff; /* This makes the entire page white by default */
+}
+
+/* Base section padding */
+.male-page section { /* <<-- Changed class name */
+  padding: 80px 5%; /* Increased padding and responsive width */
+  text-align: center;
+  position: relative; /* For absolutely positioned elements like buttons */
+}
+
+/* Banner Section */
+.male-banner-content { /* <<-- Changed class name */
+  display: flex;
+  justify-content: flex-start; /* Align content to the start (left) */
+  align-items: center; /* Center vertically */
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  padding: 0 10%; /* Increase padding for more space from the left edge */
+}
+
+/* Overlay for banner */
+.male-banner-content::before { /* <<-- Changed class name */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* Slightly less dark */
+  z-index: 1; /* Ensure overlay is above background image */
+}
+
+.male-banner-left { /* <<-- Changed class name */
+  position: relative;
+  z-index: 2; /* Bring text to front */
+  text-align: left; /* Keep text aligned to the left */
+  max-width: 550px; /* Adjust as needed */
+  flex-shrink: 0; /* Prevent it from shrinking */
+}
+
+.male-banner-left h1 { /* <<-- Changed class name */
+  font-size: 3.8rem; /* Larger font size */
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.male-title-bold { /* <<-- Changed class name */
+  font-weight: 700; /* Bolder */
+}
+
+.male-title-normal { /* <<-- Changed class name */
+  font-weight: 300; /* Lighter */
+}
+
+.male-banner-subtext { /* <<-- Changed class name */
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.male-styling-hacks-btn { /* <<-- Changed class name */
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #007bff; /* Blue button color - adjust if you want a different shade */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px; /* Slightly more rounded than 5px, but not fully pill-shaped */
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.male-styling-hacks-btn:hover { /* <<-- Changed class name */
+  background-color: #0056b3;
+}
+
+.male-small-pics-grid { /* <<-- Changed class name */
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 15px; /* Gap between images */
+  position: relative;
+  z-index: 2; /* Bring images to front */
+  margin-left: auto; /* Push grid to the right */
+  margin-right: 10%; /* Add some margin from the right edge */
+  /* Adjust max-width if images are too wide on large screens */
+  max-width: 400px; /* Example max-width for the grid */
+  align-self: center; /* Vertically center the grid within the flex container */
+}
+
+.male-small-pic-item img { /* <<-- Changed class name */
+  width: 180px; /* Fixed width for small images */
+  height: 200px; /* Fixed height for small images */
+  object-fit: cover; /* Cover the area */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Responsive adjustment for banner */
+@media (max-width: 992px) {
+  .male-banner-content { /* <<-- Changed class name */
+    flex-direction: column; /* Stack on smaller screens */
+    text-align: center;
+    padding-top: 100px; /* Give space for potential header */
+    padding-left: 5%; /* Adjust padding for consistency */
+    padding-right: 5%;
+    justify-content: center; /* Center content when stacked */
+  }
+
+  .male-banner-left { /* <<-- Changed class name */
+    margin-right: 0;
+    margin-bottom: 50px; /* Space between text and images when stacked */
+    text-align: center; /* Center text when stacked */
+  }
+
+  .male-banner-left h1 { /* <<-- Changed class name */
+    font-size: 2.8rem;
+  }
+  .male-small-pics-grid { /* <<-- Changed class name */
+    grid-template-columns: repeat(2, 1fr); /* Still 2 columns for smaller screens */
+    gap: 10px;
+    margin-left: auto; /* Keep centered */
+    margin-right: auto; /* Keep centered */
+    max-width: 350px; /* Adjust max-width for smaller screens */
+  }
+  .male-small-pic-item img { /* <<-- Changed class name */
+    width: 150px;
+    height: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .male-banner-left h1 { /* <<-- Changed class name */
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 576px) {
+  .male-small-pics-grid { /* <<-- Changed class name */
+    grid-template-columns: 1fr; /* Stack images on very small screens */
+    width: 100%;
+    max-width: 250px; /* Adjust max-width for very small screens */
+  }
+  .male-small-pic-item { /* <<-- Changed class name */
+    display: flex; /* Center single images */
+    justify-content: center;
+  }
+  .male-small-pic-item img { /* <<-- Changed class name */
+    width: 100%; /* Make images take up full width of their grid column */
+    height: 200px;
+  }
+}
+/* Wardrobe Section */
+/* Section background & spacing */
+
+.male-wardrobe-module { /* <<-- Changed class name */
+  background: #fdfaf7;
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.male-wardrobe-title { /* <<-- Changed class name */
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-bottom: 45px;
+}
+
+/* Grid */
+.male-wardrobe-grid { /* <<-- Changed class name */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 90%;
+  margin: auto;
+}
+
+/* Card */
+.male-wardrobe-card { /* <<-- Changed class name */
+  position: relative;
+  height: 580px;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Image Styling */
+.male-wardrobe-img { /* <<-- Changed class name */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Changed from 'fill' to 'cover' */
+  filter: brightness(70%);
+  transition: 0.35s ease;
+}
+
+.male-wardrobe-card:hover .male-wardrobe-img { /* <<-- Changed class name */
+  filter: brightness(50%);
+  transform: scale(1.06);
+}
+
+/* Content Layer */
+.male-wardrobe-content { /* <<-- Changed class name */
+  position: absolute;
+  bottom: 35px;
+  left: 28px;
+  text-align: left;
+  color: white;
+  z-index: 20;
+}
+
+.male-wardrobe-heading { /* <<-- Changed class name */
+  color: #FF7F00;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.male-wardrobe-desc { /* <<-- Changed class name */
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 18px;
+  max-width: 85%;
+  line-height: 1.45;
+}
+
+/* Button */
+.male-wardrobe-btn { /* <<-- Changed class name */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 26px;
+  background: #FF7F00; /* Changed button background to orange */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.male-wardrobe-btn:hover { /* <<-- Changed class name */
+  background: #cc6600; /* Darker orange on hover */
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 576px) {
+  .male-wardrobe-title { /* <<-- Changed class name */
+    font-size: 1.8rem;
+  }
+  .male-wardrobe-card { /* <<-- Changed class name */ /* Ensure card height is responsive on small screens */
+    height: 350px; /* Adjusted for better mobile viewing */
+  }
+  .male-wardrobe-img { /* <<-- Changed class name */
+    height: 100%; /* Make sure image fills the new card height */
+  }
+  .male-wardrobe-btn { /* <<-- Changed class name */
+    padding: 12px 25px;
+    font-size: 0.9rem;
+    bottom: 20px;
+  }
+}
+/* Color Combinations Section */
+.male-color-combinations-module { /* <<-- Changed class name */
+  background: #fdfaf7; /* Light background, ensure this is white if you want it white */
+  padding: 80px 5%;
+}
+
+.male-color-combinations-title { /* <<-- Changed class name */
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.male-color-combinations-subtext { /* <<-- Changed class name */
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.male-color-cards-grid { /* <<-- Changed class name */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /* Increased gap */
+  max-width: 1200px;
+  margin: 0 auto 50px auto; /* Center grid and space below */
+}
+
+.male-color-card { /* <<-- Changed class name */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  overflow: hidden; /* Important for rounded corners */
+  width: 320px; /* Fixed width for cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push title to bottom if content varies */
+  transition: transform 0.3s ease;
+}
+
+.male-color-card:hover { /* <<-- Changed class name */
+  transform: translateY(-8px);
+}
+
+.male-color-card-image { /* <<-- Changed class name */
+  width: 100%;
+  height: 350px; /* Fixed height for consistent card size */
+  object-fit: cover;
+  display: block;
+}
+
+.male-color-card-title { /* <<-- Changed class name */
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  padding: 20px; /* Padding for text inside card */
+  margin: 0;
+  text-align: left; /* Align text to left */
+}
+
+/* Specific styling for the first card (combi1) with multiple images */
+.male-combi1-card-content { /* <<-- Changed class name */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px; /* Small gap between internal images */
+  position: relative;
+  height: 350px; /* Match height of other card images */
+  overflow: hidden;
+}
+
+.male-combi1-img-small { /* <<-- Changed class name */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.male-combi1-labels { /* <<-- Changed class name */
+  position: absolute;
+  top: 15px; /* Adjust position */
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 5;
+}
+
+.male-combi1-label { /* <<-- Changed class name */
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.male-explore-more-btn-wrapper { /* <<-- Changed class name */
+  margin-top: 30px;
+}
+
+.male-explore-more-btn { /* <<-- Changed class name */
+  display: inline-block;
+  padding: 15px 45px;
+  background: linear-gradient(to right, #6a402a, #8e6c5c); /* Gradient background */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.male-explore-more-btn:hover { /* <<-- Changed class name */
+  opacity: 0.9;
+}
+
+/* Responsive adjustments for Color Combinations */
+@media (max-width: 992px) {
+  .male-color-combinations-title { /* <<-- Changed class name */
+    font-size: 2.2rem;
+  }
+  .male-color-card { /* <<-- Changed class name */
+    width: 280px;
+  }
+  .male-color-card-image, .male-combi1-card-content { /* <<-- Changed class name */
+    height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .male-color-combinations-title { /* <<-- Changed class name */
+    font-size: 1.8rem;
+  }
+  .male-color-combinations-subtext { /* <<-- Changed class name */
+    font-size: 1rem;
+  }
+  .male-color-card { /* <<-- Changed class name */
+    width: 90%; /* Allow cards to take more width on smaller screens */
+    max-width: 350px;
+  }
+  .male-explore-more-btn { /* <<-- Changed class name */
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .male-combi1-labels { /* <<-- Changed class name */
+    top: 10px;
+    left: 10px;
+  }
+  .male-combi1-label { /* <<-- Changed class name */
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Accessories Section */
+.male-accessories-module { /* <<-- Changed class name */
+  /* This is the main change to ensure a fully white background for the section */
+  background-color: #ffffff; /* Explicitly set to white */
+  padding: 80px 5%;
+}
+
+.male-accessories-header { /* <<-- Changed class name */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+  /* Make sure the header itself has a white background if it's separate */
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0; /* Optional: Rounded top corners if module is separate */
+}
+
+.male-accessories-title { /* <<-- Changed class name */
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  text-align: left; /* Align title to left within its header, if button is present */
+}
+
+.male-accessories-btn { /* <<-- Changed class name */
+  padding: 12px 25px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.male-accessories-btn:hover { /* <<-- Changed class name */
+  background-color: #555;
+}
+
+.male-accessories-gallery { /* <<-- Changed class name */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+  /* Make sure the gallery itself has a white background */
+  background-color: #ffffff;
+  padding-bottom: 20px; /* Add some padding if needed at the bottom */
+  border-radius: 0 0 10px 10px; /* Optional: Rounded bottom corners if module is separate */
+}
+
+.male-accessory-item { /* <<-- Changed class name */
+  width: 100%;
+  max-width: 380px;
+  height: 380px; /* Consistent height for all items */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .male-accessories-header { /* <<-- Changed class name */
+    flex-direction: column;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-top: 20px; /* Add some vertical padding for stacking */
+  }
+
+  .male-accessories-title { /* <<-- Changed class name */
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center; /* Center title when stacked */
+  }
+
+  .male-accessories-btn { /* <<-- Changed class name */
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .male-accessories-gallery { /* <<-- Changed class name */
+    grid-template-columns: 1fr;
+    padding: 0 20px 20px; /* Add bottom padding */
+  }
+  .male-accessory-item { /* <<-- Changed class name */
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .male-accessories-module { /* <<-- Changed class name */
+    padding: 50px 0;
+  }
+
+  .male-accessories-title { /* <<-- Changed class name */
+    font-size: 1.8rem;
+  }
+
+  .male-accessories-btn { /* <<-- Changed class name */
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .male-accessory-item { /* <<-- Changed class name */
+    height: 250px;
+  }
+}

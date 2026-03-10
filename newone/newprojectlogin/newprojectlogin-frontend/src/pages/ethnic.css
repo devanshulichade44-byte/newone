@@ -1,0 +1,312 @@
+/* General Styling for the Traditional Wear page */
+.casual-container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.casual-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.casual-badge {
+  display: inline-block;
+  background-color: #e0f2f7; /* Light blue */
+  color: #007bff; /* Primary blue */
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.casual-title {
+  font-size: 2.8em;
+  color: #2c3e50; /* Darker blue-gray */
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.casual-subtitle {
+  font-size: 1.2em;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* AI Outfit Suggestion UI (Chatbot-like Box) */
+.ai-box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 35px;
+  margin-bottom: 50px;
+  border-left: 5px solid #007bff; /* Accent color */
+}
+
+.ai-title {
+  font-size: 2.2em;
+  color: #007bff; /* Primary blue */
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.ai-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form elements */
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.ai-input,
+.ai-select {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.1em;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  -webkit-appearance: none; /* Remove default browser styling for select */
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fcfcfc;
+}
+
+.ai-input::placeholder {
+  color: #999;
+}
+
+.ai-input:focus,
+.ai-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.ai-select {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.ai-btn {
+  background-color: #007bff; /* Primary blue */
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.ai-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+.ai-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.ai-error {
+  color: #dc3545; /* Red for errors */
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: 500;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.ai-result-box {
+  background-color: #e6f7ff; /* Light blue background for results */
+  border: 1px solid #b3e0ff;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 30px;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.ai-result-title {
+  font-size: 1.6em;
+  color: #007bff;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.ai-result {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+
+/* Section Styling for traditional items */
+.section {
+  margin-bottom: 60px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.grid-item {
+  background-color: #fefefe;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.grid-item h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 15px 15px 5px;
+  font-weight: 600;
+}
+
+.grid-item .tag {
+  display: inline-block;
+  background-color: #e9f5ff; /* Lighter blue for tag */
+  color: #007bff;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+  margin: 0 15px 10px;
+}
+
+.grid-item p {
+  font-size: 1em;
+  color: #666;
+  padding: 0 15px 15px;
+  line-height: 1.5;
+  flex-grow: 1; /* Make description take up available space */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .casual-title {
+    font-size: 2em;
+  }
+
+  .casual-subtitle {
+    font-size: 1em;
+  }
+
+  .ai-title {
+    font-size: 1.8em;
+  }
+
+  .ai-form {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 2em;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack items on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .casual-container {
+    padding: 10px;
+  }
+
+  .ai-box {
+    padding: 20px;
+  }
+
+  .ai-input,
+  .ai-select,
+  .ai-btn {
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  .ai-result-box {
+    padding: 15px;
+  }
+
+  .ai-result-title {
+    font-size: 1.4em;
+  }
+
+  .ai-result {
+    font-size: 1em;
+  }
+}

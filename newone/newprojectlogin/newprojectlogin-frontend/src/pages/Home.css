@@ -1,0 +1,521 @@
+/*
+  Unified CSS: Merging custom styles (animation, dark theme) 
+  with the fixed navigation and search bar structure.
+*/
+
+/* Body and Global Settings */
+body {
+  background: linear-gradient(178.6deg, rgb(20, 36, 50) 11.8%, rgb(124, 143, 161) 83.8%);
+  font-family: 'Jura', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #f0f0f0;
+}
+
+/* --- Navbar Styling (FIXED AND UNIFIED) --- */
+.navbar {
+  font-family: 'Calibri', sans-serif;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #0d1a26, #1a252f);
+  z-index: 10000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  /* Key change: enables logo, search, and links to align horizontally */
+  justify-content: space-between;
+  gap: 20px; 
+  width: 100%;
+  flex-wrap: nowrap; /* Prevent wrapping unless in specific media query */
+}
+
+
+/* Logo Color Animation */
+.logo {
+  font-size: 36px;
+  font-weight: 200;
+  font-family: 'DM Serif Display', serif;
+  letter-spacing: 2px;
+  animation: colorChange 5s infinite alternate;
+  flex-shrink: 0; /* Essential: keeps logo from shrinking */
+}
+
+/* Keyframes for logo color change */
+@keyframes colorChange {
+  0% {
+    color: #8E2DE2; /* Purple */
+    text-shadow: 0 0 10px rgba(142, 45, 226, 0.7);
+  }
+  25% {
+    color: #4A00E0; /* Darker Purple */
+    text-shadow: 0 0 15px rgba(74, 0, 224, 0.8);
+  }
+  50% {
+    color: #00C6FF; /* Bright Blue */
+    text-shadow: 0 0 10px rgba(0, 198, 255, 0.7);
+  }
+  75% {
+    color: #EE9CA7; /* Light Pink */
+    text-shadow: 0 0 15px rgba(238, 156, 167, 0.8);
+  }
+  100% {
+    color: #8E2DE2; /* Back to initial Purple */
+    text-shadow: 0 0 10px rgba(142, 45, 226, 0.7);
+  }
+}
+
+/* --- Simple Embedded Search Bar Styles (Optimized for NAV) --- */
+
+.simple-search-form {
+    flex-grow: 1; /* Key: Search bar fills the available center space */
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 50px; 
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    /* Vertically center the form within the navbar's padding */
+    height: 40px; 
+}
+
+.simple-search-input {
+    flex-grow: 1;
+    padding: 10px 20px;
+    font-size: 1.0em;
+    border: none;
+    outline: none;
+    font-family: 'Jura', sans-serif; 
+    color: #333;
+    background: #fff;
+    border-right: none; 
+    /* Adjust line-height to center text visually */
+    line-height: 1; 
+}
+
+.simple-search-input::placeholder {
+    color: #999;
+}
+
+.simple-search-button {
+    background-color: #2a2a2a; 
+    color: #00bcd4; /* Bright icon color */
+    padding: 10px 18px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    text-shadow: 0 0 5px rgba(0, 188, 212, 0.7);
+    height: 100%; /* Fill button height */
+}
+
+.simple-search-button:hover {
+    background-color: #444;
+}
+
+/* --- Nav Links --- */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adjust gap to fit better */
+  flex-shrink: 0; /* Ensures links don't shrink */
+  padding: 0;
+}
+
+.nav-links a,
+.nav-links button {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.login-button {
+  background-color: #0d6efd;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.signup-button {
+  background-color: #198754;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Spacer to avoid content hidden behind navbar */
+/* Use the actual navbar height + padding (approx 65px) */
+.main-container {
+  padding-top: 65px; 
+}
+
+/* --- Hero Section --- */
+/* (Rest of the Hero and Section styles remain the same) */
+
+/* --- Media Queries (Adjusted for Nav Fix) --- */
+
+@media (max-width: 1050px) {
+    .navbar-inner {
+        gap: 10px;
+    }
+    .simple-search-form {
+        max-width: 450px;
+    }
+    .simple-search-input {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Stack navigation elements vertically on small screens */
+    .navbar-inner {
+        flex-direction: column;
+        align-items: stretch; /* Stretch items like search bar and links */
+        gap: 15px;
+    }
+    /* Reorder: Logo -> Links -> Search */
+    .logo {
+        align-self: flex-start;
+        order: 1; 
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        order: 2;
+    }
+    .simple-search-form {
+        width: 100%; 
+        max-width: 100%;
+        order: 3; 
+    }
+}
+
+/* --- Other Existing Section Styles (Kept for completeness) --- */
+
+/* Hero Section */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 125vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  background: linear-gradient(to right, #0d1a26, #2c3e50, #0d1a26); 
+}
+
+.hero-image-left,
+.hero-image-right {
+  position: absolute;
+  height: 100%; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.7); 
+}
+
+.hero-image-left {
+  width: 40%;
+  left: 0; 
+  top: 0;
+}
+
+.hero-image-right {
+  width: 40%;
+  right: 0; 
+  top: 0;
+}
+
+.hero-text {
+  position: absolute;
+  height: 100%;
+  text-align: center;
+  z-index: 1; 
+  color: white;
+}
+
+.hero-text1 {
+  font-size: 1.5vw; 
+  font-style: italic;
+  margin-top: 22%;
+  font-family: 'Jura', serif;
+  margin-left: -16%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: #c9c9c9; 
+}
+
+.hero-text2 {
+  font-size: 6vw; 
+  font-weight: bold;
+  margin-top: 20%;
+  color: white; 
+  opacity: 1; 
+  font-family: 'Jura', serif; 
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  opacity: 25%;
+}
+
+.hero-text3 {
+  font-size: 2vw; 
+  font-style: italic;
+  font-family: 'Jura', sans-serif;
+  margin-left: 45%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  color: #e0e0e0; 
+}
+
+/* Section Divider */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  margin: 60px auto;
+  width: 80%;
+}
+
+/* Fashion Section */
+.fashion-section {
+  text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.fashion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.fashion-text {
+  max-width: 550px;
+  padding: 20px;
+  color: #ecf0f1;
+  text-align: left;
+}
+
+.fashion-text h1 {
+  font-size: 32px;
+  color: #e67e22;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.fashion-text h2 {
+  font-size: 28px;
+  color: #3498db;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fashion-text p {
+  font-size: 18px;
+  color: #bdc3c7;
+  line-height: 1.6;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.model-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-wrapper:hover .model-image {
+  transform: scale(1.05);
+}
+
+/* Fashion Choice Module */
+.fashion-choice-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.choice-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.image-wrapper.men-container,
+.image-wrapper.women-container {
+  width: 550px;
+}
+
+.fashion-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease-in-out;
+}
+
+.image-wrapper:hover .fashion-image {
+  transform: translateY(-5px);
+}
+
+.button-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+}
+
+.fashion-button {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+.fashion-button:hover {
+  background-color: #e67e22;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Skincare Section */
+.skincare-section {
+  text-align: center;
+  padding: 50px 10px;
+  position: relative;
+}
+
+.skincare-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skincare-container {
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.skincare-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.5s ease-in-out;
+}
+
+.text-overlay {
+  margin-top: 8%;
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+  color: #ecf0f1;
+}
+
+.main-slogan {
+  font-size: 42px;
+  font-weight: bold;
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+.sub-slogan {
+  font-size: 26px;
+  color: #1abc9c;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  color: #bdc3c7;
+  line-height: 1.7;
+}
+
+.skincare-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+.skincare-container:hover .skincare-image {
+  transform: translateX(-10px) scale(1.02);
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #1a252f;
+  padding: 30px 0;
+  border-top: 1px solid #333;
+}
+
+footer a {
+  color: #bbb;
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+footer i {
+  margin-right: 8px;
+}

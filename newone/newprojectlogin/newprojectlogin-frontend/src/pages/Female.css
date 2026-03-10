@@ -1,0 +1,443 @@
+/* ===========================
+   GLOBAL PAGE BASE
+=========================== */
+.women-page,
+.sg-women-page {
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+  /* CHANGE 1: Removed pinkish color. Using a light, consistent background. */
+  background: #f8f8f8; /* A very light grey for a clean look */
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+/* ===========================
+   HERO TITLE (Top text)
+=========================== */
+.women-hero-title {
+  font-size: 55px;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #111;
+  letter-spacing: -1px; /* Slightly tighter for a modern feel */
+}
+
+/* ===========================
+   HERO GRID
+=========================== */
+.women-hero-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 20px;
+  max-width: 1200px; /* Constrain grid width for better appearance */
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Left mini stack */
+.women-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.women-img-box {
+  position: relative;
+  overflow: hidden; /* Ensure text doesn't spill if image is smaller */
+  border-radius: 12px; /* Apply to container for better consistency */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+.women-img-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* Keeps aspect ratio, crops if needed */
+  border-radius: 12px; /* Ensure image corners match box */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.women-img-box:hover img {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.img-text-box {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Make text more readable on images */
+  z-index: 1; /* Ensure text is above any potential overlays */
+}
+
+.img-text-box h3 {
+  margin-bottom: 5px;
+  font-size: 1.2em; /* Slightly larger heading */
+}
+
+.img-text-box p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+
+/* Right big image */
+.women-right-main {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.women-right-main img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.women-right-main:hover img {
+  transform: scale(1.05);
+}
+
+/* Hero floating card */
+.hero-offer-box {
+  position: absolute;
+  bottom: 25px; /* Slightly adjust position */
+  left: 25px;
+  background: rgba(255,255,255,0.95); /* Slightly less transparent */
+  padding: 20px 25px; /* More padding */
+  border-radius: 12px;
+  max-width: 80%; /* Allow it to be a bit wider */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.18); /* Stronger shadow */
+  backdrop-filter: blur(5px); /* Add a subtle blur effect */
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+}
+
+.hero-offer-box h2 {
+  font-size: 24px; /* Larger heading */
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px; /* Space from paragraph */
+}
+
+.hero-offer-box p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px; /* Space from button */
+}
+
+.shop-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 22px; /* More padding */
+  border-radius: 25px; /* More rounded */
+  background: #000;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.shop-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   CATEGORY SECTION
+=========================== */
+.women-categories {
+  margin-top: 80px; /* More space from hero */
+  max-width: 1200px; /* Match hero grid width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title,
+.sg-section-title {
+  font-size: 42px; /* Slightly larger title */
+  font-weight: 800;
+  margin-bottom: 40px; /* More space from grid */
+  text-align: center;
+  color: #111;
+  letter-spacing: -1px;
+}
+
+/* Category grid */
+.women-cat-grid,
+.sg-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly larger min column size */
+  gap: 25px; /* Slightly more gap */
+  padding: 0 10px;
+}
+
+/* Category card */
+.cat-card,
+.sg-category-box {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for box-shadow too */
+  background: white;
+  border-radius: 14px;
+  padding: 20px; /* More padding */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* More pronounced shadow */
+  display: flex; /* Use flexbox to align content */
+  flex-direction: column;
+  justify-content: space-between; /* Push image to top, text to bottom */
+}
+
+.cat-card img,
+.sg-cat-img {
+  width: 100%;
+  height: 280px; /* CHANGE 3: Set a fixed height */
+  object-fit: contain; /* CHANGE 2: Use 'contain' to show the full image */
+  border-radius: 12px; /* Slightly less rounded than container for subtle effect */
+  margin-bottom: 15px; /* Space between image and text */
+}
+
+.cat-card h3 {
+  font-size: 1.6em; /* Larger heading for categories */
+  font-weight: 700;
+  color: #333;
+  margin: 0; /* Reset default margin */
+}
+
+.cat-card:hover,
+.sg-category-box:hover {
+  transform: translateY(-8px); /* Lift higher on hover */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.sg-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* ===========================
+   INSPO QUOTE
+=========================== */
+.sg-style-quote {
+  margin-top: 80px; /* More space */
+  margin-bottom: 80px;
+  padding: 50px; /* More padding */
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.8rem; /* Larger font size */
+  color: #666; /* Slightly softer color */
+  background: #fff; /* White background for the quote box */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ===========================
+   ACCESSORIES
+=========================== */
+.accessories-module {
+  margin-top: 80px; /* More space */
+  max-width: 1200px; /* Match other sections */
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff; /* White background for the entire module */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.accessories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px; /* More space from gallery */
+}
+
+.accessories-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #111;
+  margin: 0; /* Reset default margin */
+}
+
+.accessories-gallery {
+  display: flex;
+  gap: 20px; /* Slightly more gap */
+  justify-content: space-around; /* Distribute items evenly */
+  align-items: center; /* Vertically align items */
+}
+
+.accessory-item {
+  width: calc(33.33% - 15px); /* Account for gap, ensure three items fit */
+  height: 450px; /* Slightly taller */
+  object-fit: cover; /* CHANGE 3: Changed to cover for accessories for a more polished look */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow to individual items */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accessory-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.accessories-btn {
+  padding: 10px 22px; /* More padding */
+  background: #000;
+  color: white;
+  border-radius: 25px; /* More rounded */
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.accessories-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+
+/* ===========================
+   RESPONSIVE ADJUSTMENTS
+=========================== */
+@media (max-width: 992px) {
+  .women-hero-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+
+  .women-left-column {
+    flex-direction: row; /* Keep left images side-by-side if enough space */
+  }
+  .women-left-column .women-img-box {
+    flex: 1; /* Make them take equal width */
+  }
+
+  .women-right-main img {
+    height: 400px; /* Adjust height for main image */
+  }
+
+  .women-hero-title, .section-title, .accessories-title {
+    font-size: 40px;
+  }
+
+  .hero-offer-box {
+    max-width: 90%;
+    left: 15px;
+    bottom: 15px;
+    padding: 15px 20px;
+  }
+
+  .hero-offer-box h2 {
+    font-size: 20px;
+  }
+  .hero-offer-box p {
+    font-size: 14px;
+  }
+
+  .sg-style-quote {
+    font-size: 1.2rem;
+    padding: 30px;
+  }
+
+  .accessories-gallery {
+    flex-wrap: wrap; /* Allow accessory items to wrap */
+  }
+
+  .accessory-item {
+    width: calc(50% - 10px); /* Two items per row on tablets */
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .women-page, .sg-women-page {
+    padding: 15px;
+  }
+
+  .women-hero-title, .section-title, .accessories-title {
+    font-size: 32px;
+  }
+
+  .women-left-column {
+    flex-direction: column; /* Stack left images again on smaller mobiles */
+  }
+
+  .women-img-box img {
+    height: 200px;
+  }
+
+  .women-right-main img {
+    height: 300px;
+  }
+
+  .hero-offer-box {
+    max-width: calc(100% - 30px); /* Adjust max-width */
+    left: 10px;
+    bottom: 10px;
+    padding: 12px 15px;
+  }
+
+  .hero-offer-box h2 {
+    font-size: 18px;
+  }
+  .hero-offer-box p {
+    font-size: 13px;
+  }
+  .shop-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  .women-cat-grid, .sg-category-grid {
+    grid-template-columns: 1fr; /* Stack categories on small mobiles */
+  }
+
+  .cat-card img, .sg-cat-img {
+    height: 220px;
+  }
+
+  .cat-card h3 {
+    font-size: 1.4em;
+  }
+
+  .sg-style-quote {
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  .accessories-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .accessories-btn {
+    align-self: flex-start;
+  }
+
+  .accessories-gallery {
+    flex-direction: column; /* Stack accessories */
+  }
+
+  .accessory-item {
+    width: 100%; /* Full width for accessories */
+    height: 200px;
+  }
+}
